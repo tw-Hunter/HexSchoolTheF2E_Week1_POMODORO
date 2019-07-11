@@ -1,0 +1,282 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Google字型 */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrap{
+    width: 1280px;
+    margin: auto;
+}
+
+/* ---- 左側功能 ---- */
+.main {
+    width: 830px;
+    height: 800px;
+    background: #FFEDF7;
+    float: left;
+    position: relative;
+}
+/* ## 資訊區域 */
+.datas {
+    display: flex;
+    flex-direction: column;
+}
+/* ## 表頭-增加項目 */
+.todo-Add {
+    position: relative;
+    margin: 48px auto auto 80px;
+    justify-content: space-between;
+}
+.todo-Add input{
+    width: 445px;
+    height: 56px;
+    padding: 19px 35px 18px 16px;
+    color: #FF4384;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+.todo-Add input::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #FF4384;
+}
+.todo-Add input:-ms-input-placeholder {
+    color: #FF4384;
+    font-weight: bold;
+    font-style: italic;
+}
+.todo-Add .material-icons {
+    display: block;
+    position: absolute;
+    color: #FF4384;
+    top: 15px;
+    right: 10px;
+}
+.todo-Add .material-icons:hover{
+    cursor: pointer;
+}
+/* ## 執行項目 */
+.RunningItem {
+    margin-top: 150px;
+    margin-left: 80px;
+}
+.RunningItem .todoItem {
+    color: #003164;
+    width: 445px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+.RunningItem .todoTime {
+    width: 445px;
+    text-align: center;
+    margin-top: 20px;
+}
+.RunningItem .todoTime span {
+    color: #FF4384;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 100px;
+}
+
+/* ## 待辦項目 */
+.todo-List {
+    margin-top: 140px;
+    margin-left: 80px;
+}
+.todo-List .ItemList {
+    color: #003164;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 36px;
+}
+.ItemList ul li{
+    display: flex;
+    width: 445px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #003164;
+}
+.ItemList ul li span{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    border: 2px solid #003164;
+    border-radius: 50%;
+}
+.ItemList ul li span,i {
+    display: inline-block;
+    cursor: pointer;
+}
+.todo-List span {
+    display: block;
+    width: 445px;
+    color: #FF4384;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 36px;
+    cursor: pointer;
+    text-align: right;
+}
+
+/* ---- 番茄鐘 ---- */
+.outAction {
+    position: absolute;
+    border: 5px solid #FF4384;
+    background: transparent;
+    border-radius: 50%;
+    width: 540px;
+    height: 540px;
+    top: 130px;
+    left: 560px;
+}
+
+.innAction {
+    position: absolute;
+    background: #FF4384;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    top: 150px;
+    left: 580px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:  center;
+}
+
+.ctrlBtn {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.btnPlay {
+    display: block;
+    width: 96px;
+    height: 96px;
+    text-decoration: none;
+    background-image: url("../Images/baseline_play_circle_filled_white_48dp.png");
+    background-repeat: no-repeat;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.btnStop {
+    display: none;
+    width: 96px;
+    height: 96px;
+    text-decoration: none;
+    background-image: url("../Images/baseline_pause_circle_filled_white_48dp.png");
+    background-repeat: no-repeat;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* ---- 右側功能 ---- */
+.menu {
+    float: right;
+    width: 450px;
+    height: 800px;
+    background: #003164;
+}
+.menu .aside {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.menu .aside .menu-Func i{
+    display: block;
+    font-size: 36px;
+    margin: 35px 85px;
+    color: #fff;
+}
+.menu .aside .logo a{
+    display: block;
+    width: 165px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    transform: translateX(-22px) translateY(-100px) rotateZ(90deg);
+}
+
+/* ---- 共用功能 ---- */
+.clearfix:after{
+    content:'';
+    display:table;
+    clear:both;
+  }

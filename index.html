@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>THE F2E 2nd Week 01</title>
+
+    <!-- 網站特性 -->
+    <meta name="description" content="番茄鐘，辦公好效率。" />
+    <meta name="keywords" content="番茄鐘, 效率, 辦公效率" />
+
+    <!-- IE版本處理 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/main.css">
+
+    <!-- JS -->
+    <script src="JS/jquery-3.4.1.min.js"></script>
+    <script src="JS/main.js"></script>
+</head>
+
+<body>
+    <div class="wrap clearfix">
+        <div class="main clearfix">
+            <!-- 資訊區域 -->
+            <div class="datas">
+                <!-- 表頭-增加項目 -->
+                <div class="todo-Add">
+                    <input type="text" name="txt_AddTodo" id="txt_AddTodo" placeholder="ADD A NEW MISSION…">
+                    <i class="material-icons"> add </i>
+                </div>
+
+                <!-- 執行項目 -->
+                <div class="RunningItem">
+                    <div class="todoItem">
+                        <h2> THE 1ST THING TO DO TODAY </h2>
+                    </div>
+                    <div class="todoTime">
+                        <span>00：25</span>
+                    </div>
+                </div>
+
+
+                <!-- 待辦項目 -->
+                <div class="todo-List">
+                    <div class="ItemList">
+                        <ul>
+                            <li>
+                                <label><span></span>THE 2ND THING TO DO TODAY</label>
+                                <i class="material-icons"> play_circle_outline </i>
+                            </li>
+                            <li>
+                                <label><span></span>THE 3RD THING TO DO TODAY</label>
+                                <i class="material-icons"> play_circle_outline </i>
+                            </li>
+                            <li>
+                                <label><span></span>THE 4TH THING TO DO TODAY</label>
+                                <i class="material-icons"> play_circle_outline </i>
+                            </li>
+                        </ul>
+                    </div>
+                    <span>MORE</span>
+                </div>
+            </div>
+
+
+            <!-- 執行區域 -->
+            <div class="outAction"></div>
+            <div class="innAction">
+                <div class="ctrlBtn">
+                    <a class="btnPlay" href="#Play">Play</a>
+                    <a class="btnStop" href="#Stop">Stop</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu clearfix">
+            <div class="aside">
+                <div class="menu-Func">
+                    <i class="material-icons list"> list </i>
+                    <i class="material-icons"> insert_chart </i>
+                    <i class="material-icons"> library_music </i>
+                </div>
+
+                <div class="logo">
+                    <a href="#">POMODORO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
